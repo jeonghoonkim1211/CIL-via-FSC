@@ -5,7 +5,7 @@
     ```bash
     bash exp_cifar_cwd_fsc.sh
     ```  
-    Run the experiment on ImageNet 100 in the order of three different classes with the initial 50 classes:  
+    In the same way, run the experiment on ImageNet 100 in the order of three different classes with the initial 50 classes:  
     ```bash
     bash exp_im100_cwd_fsc.sh
     ```  
