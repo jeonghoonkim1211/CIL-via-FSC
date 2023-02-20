@@ -5,12 +5,10 @@ Run the experiment on CIFAR 100 in the order of three different classes with the
   ```bash
   bash exp_cifar_cwd_fsc.sh
   ```
-
 Run the experiment on ImageNet 100 in the order of three different classes with the initial 50 classes:  
   ```bash
   bash exp_im100_cwd_fsc.sh
   ```
-
 The device of Our experiments is TITAN-V GPU.   
 If the device is different, the results may be different.
 
