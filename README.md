@@ -16,9 +16,9 @@
 To use FSC loss for individual projects, you can use the code implemented in /src/approach/fcs_loss.py
 
 3. citation  
-Not yet
+Not yet.
 
 4. acknowledgment  
-Not yet
+Not yet.
 
-Our code base on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD) 
+Our code is base on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD). 
