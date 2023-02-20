@@ -14,15 +14,15 @@
     bash exp_im100_cwd_fsc.sh
     ```  
     The device of Our experiments is TITAN-V GPU.  
-    If the device is different, the results may be different.   
+    If the device is different, the results may be slightly different.   
 
-2. customizing code  
+2. Customizing code  
 To use FSC loss for individual projects, you can use the code implemented in /src/approach/fcs_loss.py
 
-3. citation  
+3. Citation  
 Not yet.
 
-4. acknowledgment  
+4. Acknowledgment  
 Not yet.
 
 Our code is base on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD). 
