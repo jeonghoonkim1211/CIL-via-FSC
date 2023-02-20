@@ -1,6 +1,10 @@
 # CIL-via-FSC
 
 1. Guide to run our code  
+    Requirements should be installed.
+    ```python
+    pip install -r requirements.txt
+    ```
     Run the experiment on CIFAR 100 in the order of three different classes with the initial 50 classes:  
     ```bash
     bash exp_cifar_cwd_fsc.sh
