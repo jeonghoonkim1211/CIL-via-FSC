@@ -13,7 +13,7 @@
     ```bash
     bash exp_im100_cwd_fsc.sh
     ```  
-    The device of Our experiments is TITAN-V GPU.  
+    The device of ur experiments is TITAN-V GPU.  
     If the device is different, the results may be slightly different.   
 
 2. Customizing code  
