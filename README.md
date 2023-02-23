@@ -5,6 +5,10 @@
     ```python
     pip install -r requirements.txt
     ```
+    In our torch version,
+    ```python
+    pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 -f https://download.pytorch.org/whl/torch_stable.html
+    ```
     Run the experiment on CIFAR 100 in the order of three different classes with the initial 50 classes:  
     ```bash
     bash exp_cifar_cwd_fsc.sh
