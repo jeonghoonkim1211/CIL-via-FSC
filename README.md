@@ -1,7 +1,7 @@
 # CIL-via-FSC
 
 1. Guide to run our code  
-    Requirements should be installed.
+    Requirements should be installed at Python 3.7.
     ```python
     pip install -r requirements.txt
     ```
