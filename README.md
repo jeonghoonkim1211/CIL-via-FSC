@@ -19,4 +19,7 @@
 2. Customizing code  
 To use FSC loss for individual projects, you can use the code implemented in /src/approach/fcs_loss.py
 
+3. Contact   
+Jeonghoon Kim, naon710@gmail.com
+
 Our code is base on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD). 
