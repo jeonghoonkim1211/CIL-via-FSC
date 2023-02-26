@@ -26,4 +26,4 @@ To use FSC loss for individual projects, you can use the code implemented in /sr
 4. Contact   
 Jeonghoon Kim, naon710@gmail.com
 
-Our code is base on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD). 
+Our code is based on [FACIL](https://github.com/mmasana/FACIL), and [CwD](https://github.com/Yujun-Shi/CwD). 
