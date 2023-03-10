@@ -54,6 +54,4 @@ class DecorrelateLossClass(nn.Module):
             return 0
         else:
             loss = loss / n_count
-            #loss_2i = loss_2i / n_count
-            #return loss, loss_2i
             return loss
