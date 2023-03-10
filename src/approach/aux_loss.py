@@ -26,9 +26,7 @@ class DecorrelateLossClass(nn.Module):
 
     def forward(self, x, y):
         _, C = x.shape
-        if self.ddp:
-            # if DDP
-            # first gather all x and labels from the world
+        if self.ddp:            
             x = torch.cat(GatherLayer.apply(x), dim=0)
             y = global_gather(y)
 
@@ -43,16 +41,12 @@ class DecorrelateLossClass(nn.Module):
             x_label = x_label / torch.sqrt(self.eps + x_label.var(dim=0, keepdim=True))
             N = x_label.shape[0]
             corr_mat = torch.matmul(x_label.t(), x_label)
-            #jh inter-class diff
+            
+            #Sec. 3.2 Intra/inter-class Feature Learning
             loss_fcs = self.fcs_loss(x, x_label, uniq_l, y, i)
-            # Notice that here the implementation is a little bit different
-            # from the paper as we extract only the off-diagonal terms for regularization.
-            # Mathematically, these two are the same thing since diagonal terms are all constant 1.
-            # However, we find that this implementation is more numerically stable.
-            #loss += (off_diagonal(corr_mat).pow(2)).mean()
-            #loss += (off_diagonal(corr_mat).pow(2)).mean()
+                        
+            #Sec. 3.3 Integrating with the Baseline Methods
             loss += (off_diagonal(corr_mat).pow(2)).mean()+ loss_fcs 
-            #loss_2i = self.coef_2i(loss1+loss2)
             n_count += N
 
         if n_count == 0:
