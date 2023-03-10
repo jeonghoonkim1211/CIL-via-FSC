@@ -13,7 +13,6 @@ class CalibrationClass(nn.Module):
         self.eps = 1e-8
         self.coef_2i = coef_2i
 
-
     def forward(self, x, x_label, uniq_l, y, i):
         #Sec.3.2 inter-class learning
         loss1=0.0
