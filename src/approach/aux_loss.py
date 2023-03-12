@@ -5,7 +5,7 @@ import torch.nn as nn
 from .utils import *
 from torch.distributions import Normal, Independent
 from torch import distributed as dist
-from .fcs_loss import CalibrationClass 
+from .fsc_loss import CalibrationClass 
  
 # function credit to https://github.com/facebookresearch/barlowtwins/blob/main/main.py
 def off_diagonal(x):
