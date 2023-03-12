@@ -22,7 +22,7 @@ class DecorrelateLossClass(nn.Module):
         self.reject_threshold = reject_threshold
         self.ddp = ddp
         self.coef_2i = coef_2i
-        self.fcs_loss = CalibrationClass(self.coef_2i)
+        self.fsc_loss = CalibrationClass(self.coef_2i)
 
     def forward(self, x, y):
         _, C = x.shape
@@ -43,10 +43,10 @@ class DecorrelateLossClass(nn.Module):
             corr_mat = torch.matmul(x_label.t(), x_label)
             
             #Sec. 3.2 Intra/inter-class Feature Learning
-            loss_fcs = self.fcs_loss(x, x_label, uniq_l, y, i)
+            loss_fsc = self.fsc_loss(x, x_label, uniq_l, y, i)
                         
             #Sec. 3.3 Integrating with the Baseline Methods
-            loss += (off_diagonal(corr_mat).pow(2)).mean()+ loss_fcs 
+            loss += (off_diagonal(corr_mat).pow(2)).mean()+ loss_fsc 
             n_count += N
 
         if n_count == 0:
