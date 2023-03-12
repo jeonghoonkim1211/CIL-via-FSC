@@ -262,7 +262,7 @@ class Appr(Inc_Learning_Appr):
 
             # --------------- auxiliary loss specifics --------------------
             if t == 0:
-                #Sec. 3.2 Feature Shift for Bias Correction
+                #Sec. 3.2 Bias Correction
                 m_f1 = torch.mean(features,0)
                 features = features -m_f1
                 
