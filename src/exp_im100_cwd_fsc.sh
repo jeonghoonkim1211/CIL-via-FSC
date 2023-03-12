@@ -1,4 +1,3 @@
-#for abla in $(seq 1.2 0.1 1.8)
 for tk in 6
 do
     for sd in 0
