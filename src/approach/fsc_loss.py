@@ -30,5 +30,5 @@ class CalibrationClass(nn.Module):
         if len(m2)>2:
             for aa in range(len(m2)-1):
                 loss2+=(m2[aa,:]-m2[aa+1,:]).pow(2).mean() 
-        fcs_loss =  self.coef_2i*(loss1+loss2) 
-        return fcs_loss 
+        fsc_loss =  self.coef_2i*(loss1+loss2) 
+        return fsc_loss 
